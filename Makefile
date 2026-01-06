@@ -4,9 +4,11 @@ VENV_PY := $(VENV_DIR)/bin/python
 TEST_NAMES = 0_0_cluster 0_0_scatter 0_0_lines 0_0_expwilds 0_0_ways 0_0_lines_feature_match
 
 ifeq ($(OS),Windows_NT)
+	PYTHON := py -3.13
 	VENV_PY := $(VENV_DIR)\Scripts\python.exe
 	ACTIVATE := $(VENV_DIR)\Scripts\activate.bat
 else
+	PYTHON := python3
 	ACTIVATE := source $(VENV_DIR)/bin/activate
 endif
 
